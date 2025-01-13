@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647877022727",
+    "project_id": "healthn-154ee",
+    "storage_bucket": "healthn-154ee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647877022727:android:10892fe080e01f236c46a2",
+        "android_client_info": {
+          "package_name": "com.example.healthn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT7rhv0y3XMzTaag6xlIAewlDGIYz2IxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
