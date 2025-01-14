@@ -3,7 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:healthn/customwidgets/dashboard_item_view.dart';
 import 'package:healthn/model/dashboard_model.dart';
 import 'package:healthn/pages/login_page.dart';
-
+import 'package:healthn/providers/nurse_provider.dart';
+import 'package:provider/provider.dart';
 import '../auth/auth_service.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -17,7 +18,10 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   @override
-  void didChangeDependencies() {}
+  void didChangeDependencies() {
+    Provider.of<NurseProvider>(context, listen: false).getAllSpeciality();
+        super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {

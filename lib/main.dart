@@ -5,16 +5,22 @@ import 'package:healthn/auth/auth_service.dart';
 import 'package:healthn/pages/add_nurse_page.dart';
 import 'package:healthn/pages/dashboard_page.dart';
 import 'package:healthn/pages/login_page.dart';
-import 'package:healthn/pages/speciality.dart';
+import 'package:healthn/pages/speciality_page.dart';
 import 'package:healthn/pages/view_nurse_page.dart';
+import 'package:healthn/providers/nurse_provider.dart';
 import 'firebase_options.dart';
-
+import 'package:provider/provider.dart';
+import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(MultiProvider(
+      providers:[
+ChangeNotifierProvider(create: (context)=> NurseProvider()),
+      ],
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthn/pages/add_nurse_page.dart';
-import 'package:healthn/pages/speciality.dart';
+import 'package:healthn/pages/speciality_page.dart';
 import 'package:healthn/pages/view_nurse_page.dart';
 
 class DashboardModel {
