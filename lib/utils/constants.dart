@@ -18,3 +18,5 @@ abstract final class NurseUtils {
   static const focusList = [_day, _night,_dayAndNight,];
 
 }
+
+const String currencySymbol='\$';

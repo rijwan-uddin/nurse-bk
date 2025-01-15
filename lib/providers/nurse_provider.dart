@@ -6,7 +6,7 @@ import '../model/nurse.dart';
 
 class NurseProvider with ChangeNotifier {
   List<Speciality> specialityList = [];
-
+  List<Nurse> nurseList = [];
 
   Future<void> addSpeciality(String name) {
     final speciality = Speciality(name: name);
@@ -20,8 +20,21 @@ class NurseProvider with ChangeNotifier {
     });
   }
 
+  getAllNurses() {
+    DbHelper.getAllNurses().listen((snapshot) {
+      nurseList = List.generate(snapshot.docs.length,
+              (index) => Nurse.fromJson(snapshot.docs[index].data()));
+      notifyListeners();
+    });
+  }
+  Nurse findNurseById(String id) =>
+      nurseList.firstWhere((element) => element.id== id);
+
   Future<void> addNurse(Nurse nurse){
     return DbHelper.addNurse(nurse);
+  }
+  Future<void> updateNurseField(String id, String field, dynamic value ){
+    return DbHelper().updateNurseField(id, {field : value});
   }
 
 }

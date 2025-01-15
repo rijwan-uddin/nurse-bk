@@ -4,7 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:healthn/auth/auth_service.dart';
 import 'package:healthn/pages/add_nurse_page.dart';
 import 'package:healthn/pages/dashboard_page.dart';
+import 'package:healthn/pages/description_page.dart';
 import 'package:healthn/pages/login_page.dart';
+import 'package:healthn/pages/nurse_details_page.dart';
 import 'package:healthn/pages/speciality_page.dart';
 import 'package:healthn/pages/view_nurse_page.dart';
 import 'package:healthn/providers/nurse_provider.dart';
@@ -62,6 +64,20 @@ class MyApp extends StatelessWidget {
               name: ViewNursePage.routeName,
               path: ViewNursePage.routeName,
               builder: (context, state) => ViewNursePage(),
+              routes: [
+                GoRoute(
+                  name: NurseDetailsPage.routeName,
+                  path: NurseDetailsPage.routeName,
+                  builder: (context, state) => NurseDetailsPage(id: state.extra! as String,),
+                routes: [
+                  GoRoute(
+                    name: DescriptionPage.routeName,
+                    path: DescriptionPage.routeName,
+                    builder: (context, state) => DescriptionPage(id: state.extra! as String,),
+                  ),
+                ],
+                ),
+              ]
             ),
             GoRoute(
               name: SpecialityPage.routeName,
