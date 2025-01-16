@@ -25,4 +25,6 @@ const List<DashboardModel> dashboardModelList = [
       title: 'Speciality',
       iconData: Icons.folder_special_rounded,
       routeName: SpecialityPage.routeName),
+
+
 ];

@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:go_router/go_router.dart';
@@ -53,28 +53,28 @@ class _NurseDetailsPageState extends State<NurseDetailsPage> {
           //   const Center(child: CircularProgressIndicator()),
           //   errorWidget: (context, url, error) => const Icon(Icons.error),
           // ),
-          CachedNetworkImage(
-            width: 100,
-            height: 100,
-            fit: BoxFit.cover,
-            imageUrl: '',
-            // Leave this empty or provide a dummy value
-            placeholder: (context, url) => Center(
-              child: CircularProgressIndicator(),
-            ),
-            errorWidget: (context, url, error) => Image.network(
-              'https://cdn-icons-png.flaticon.com/512/172/172825.png',
-              width: 60, // Adjust as needed
-              height: 60, // Adjust as needed
-              fit: BoxFit.cover,
-            ),
-          ),
-          // Image.network(
-          //   'https://cdn-icons-png.flaticon.com/512/172/172825.png',
-          //   width: 60, // Adjust as needed
-          //   height: 60, // Adjust as needed
+          // CachedNetworkImage(
+          //   width: 100,
+          //   height: 100,
           //   fit: BoxFit.cover,
+          //   imageUrl: '',
+          //   // Leave this empty or provide a dummy value
+          //   placeholder: (context, url) => Center(
+          //     child: CircularProgressIndicator(),
+          //   ),
+          //   errorWidget: (context, url, error) => Image.network(
+          //     'https://cdn-icons-png.flaticon.com/512/172/172825.png',
+          //     width: 60, // Adjust as needed
+          //     height: 60, // Adjust as needed
+          //     fit: BoxFit.cover,
+          //   ),
           // ),
+          Image.network(
+            'https://cdn-icons-png.flaticon.com/512/172/172825.png',
+            width: 100, // Adjust as needed
+            height: 100, // Adjust as needed
+            fit: BoxFit.cover,
+          ),
 
           // SizedBox(
           //   width: MediaQuery.of(context).size.width,

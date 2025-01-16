@@ -111,7 +111,7 @@ class _DashboardPageState extends State<DashboardPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Carousel Slider with responsive height
+
             CarouselSlider.builder(
               itemCount: imageUrls.length,
               itemBuilder: (context, index, realIndex) {
@@ -122,23 +122,23 @@ class _DashboardPageState extends State<DashboardPage> {
                 );
               },
               options: CarouselOptions(
-                height: screenHeight * 0.25, // Set the height to 25% of the screen height
+                height: screenHeight * 0.25,
                 autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
+                autoPlayInterval: Duration(seconds: 5),
                 enlargeCenterPage: true,
                 viewportFraction: 1.0,
               ),
             ),
 
-            // "Good health care is our priority" text
+
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Text(
-                'Good health care is our priority',
+                'Your health care is our priority',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent,
+                  color: Colors.blue.shade300,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -147,7 +147,7 @@ class _DashboardPageState extends State<DashboardPage> {
             // Grid of Dashboard Items
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(), // Prevent scrolling within grid
+              physics: NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,

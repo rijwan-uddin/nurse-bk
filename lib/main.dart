@@ -12,7 +12,7 @@ import 'package:healthn/pages/view_nurse_page.dart';
 import 'package:healthn/providers/nurse_provider.dart';
 import 'firebase_options.dart';
 import 'package:provider/provider.dart';
-import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

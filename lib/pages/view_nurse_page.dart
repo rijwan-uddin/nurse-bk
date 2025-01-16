@@ -46,20 +46,26 @@ class _ViewNursePageState extends State<ViewNursePage> {
                       //   errorWidget: (context, url, error) => Icon(Icons.account_box_sharp),
                       // ),
 
-                      CachedNetworkImage(
-                        width: 100,
-                        height: 100,
+                      // CachedNetworkImage(
+                      //   width: 100,
+                      //   height: 100,
+                      //   fit: BoxFit.cover,
+                      //   imageUrl: '', // Leave this empty or provide a dummy value
+                      //   placeholder: (context, url) => Center(
+                      //     child: CircularProgressIndicator(),
+                      //   ),
+                      //   errorWidget: (context, url, error) => Image.network(
+                      //     'https://cdn-icons-png.flaticon.com/512/172/172825.png',
+                      //     width: 60, // Adjust as needed
+                      //     height: 60, // Adjust as needed
+                      //     fit: BoxFit.cover,
+                      //   ),
+                      // ),
+                      Image.network(
+                        'https://cdn-icons-png.flaticon.com/512/172/172825.png',
+                        width: 80, // Adjust as needed
+                        height: 80, // Adjust as needed
                         fit: BoxFit.cover,
-                        imageUrl: '', // Leave this empty or provide a dummy value
-                        placeholder: (context, url) => Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                        errorWidget: (context, url, error) => Image.network(
-                          'https://cdn-icons-png.flaticon.com/512/172/172825.png',
-                          width: 60, // Adjust as needed
-                          height: 60, // Adjust as needed
-                          fit: BoxFit.cover,
-                        ),
                       ),
 
 

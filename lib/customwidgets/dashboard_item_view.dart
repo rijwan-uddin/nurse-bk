@@ -46,13 +46,13 @@ class DashboardItemView extends StatelessWidget {
       onTap: () => onPress(model.routeName),
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10), // Rounded corners for the card
+          borderRadius: BorderRadius.circular(10),
         ),
         elevation: 6, // Reduced shadow for a more subtle effect
         shadowColor: Colors.black.withOpacity(0.2), // Slight shadow effect
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8), // Reduced margin
+        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
         child: Container(
-          width: 150, // Fixed width for smaller cards
+          width: 150,
           height: 160, // Fixed height for smaller cards
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -60,7 +60,7 @@ class DashboardItemView extends StatelessWidget {
               colors: [Colors.blue.shade100, Colors.blue.shade300],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-            ), // Adding a gradient to the background
+            ),
           ),
           child: Center(
             child: Column(
@@ -68,17 +68,17 @@ class DashboardItemView extends StatelessWidget {
               children: [
                 Icon(
                   model.iconData,
-                  size: 40, // Smaller icon size
+                  size: 50, // Smaller icon size
                   color: Colors.white,
                 ),
                 SizedBox(height: 8),
                 Text(
                   model.title,
-                  style: TextStyle(
-                    fontSize: 14, // Smaller text size
+                  style: const TextStyle(
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    letterSpacing: 1.0, // Letter spacing for a modern look
+                    letterSpacing: 1.0,
                   ),
                   textAlign: TextAlign.center,
                 ),
